@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ✏️ O'ZGARTIRING: sahifa sarlavhasi va tavsifi (Google va Telegram'da shunday ko'rinadi) -->
+  <title>Ism Familiya | Frontend dasturchi, Xiva</title>
+  <meta name="description" content="Ism Familiya — Xivalik 11-sinf o'quvchisi va frontend dasturchi. HTML, CSS va JavaScript bilan telefonda ham, kompyuterda ham yaxshi ishlaydigan saytlar yasayman.">
+  <meta name="theme-color" content="#0f766e">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ism Familiya | Frontend dasturchi">
+  <meta property="og:description" content="Loyihalarim, ko'nikmalarim va aloqa ma'lumotlarim bir joyda.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='6' width='20' height='20' fill='%230f766e'/%3E%3Crect x='6' y='6' width='20' height='20' fill='%230f766e' transform='rotate(45 16 16)'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+  <!-- Sahifa yuklanishidan oldin mavzuni qo'yadi (oq chaqnash bo'lmasligi uchun) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#about">Asosiy qismga o'tish</a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="#hero" aria-label="Bosh sahifaga qaytish">
+        <span class="brand__mark" aria-hidden="true" data-initials>IF</span>
+        <span class="brand__name" data-name>Rustamboyev Behruz</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Asosiy menyu">
+        <ul>
+          <li><a href="#about">Men</a></li>
+          <li><a href="#skills">Ko'nikmalar</a></li>
+          <li><a href="#projects">Loyihalar</a></li>
+          <li><a href="#education">Yutuqlar</a></li>
+          <li><a href="#contact">Aloqa</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-tools">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Qorong'i rejimni almashtirish" aria-pressed="false">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Menyuni ochish" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== 1. HERO ========== -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero__pattern" aria-hidden="true">
+        <div class="hero__glow"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <!-- ✏️ O'ZGARTIRING: ism, yo'nalish va shior -->
+          <p class="status" style="--i:0"><span class="status__dot" aria-hidden="true"></span>Stajirovka va freelance loyihalarga ochiqman</p>
+          <p class="hero__hello" style="--i:1">Salom, men</p>
+          <h1 class="hero__name" id="hero-title" style="--i:2" data-name>Rustamboyev Behruz</h1>
+          <p class="hero__role" style="--i:3">Frontend dasturchi va 9-sinf o'quvchisi</p>
+          <p class="hero__tagline" style="--i:4">G'oyalarni telefonda ham, kompyuterda ham bexato ishlaydigan saytlarga aylantiraman.</p>
+          <div class="hero__actions" style="--i:5">
+            <a class="btn btn--primary" href="#projects">Loyihalarimni ko'rish</a>
+            <a class="btn btn--ghost" href="#contact">Bog'lanish</a>
+          </div>
+        </div>
+
+        <div class="hero__photo" style="--i:2">
+          <svg class="hero__star" viewBox="0 0 400 400" aria-hidden="true">
+            <rect class="star-a" x="65" y="65" width="270" height="270"/>
+            <rect class="star-a" x="65" y="65" width="270" height="270" transform="rotate(45 200 200)"/>
+            <rect class="star-b" x="95" y="95" width="210" height="210"/>
+            <rect class="star-b" x="95" y="95" width="210" height="210" transform="rotate(45 200 200)"/>
+          </svg>
+          <div class="avatar">
+            <span class="avatar__initials" aria-hidden="true" data-initials>IF</span>
+            <!-- ✏️ O'ZGARTIRING: o'z rasmingizni images/me.jpg nomi bilan saqlang -->
+            <img src="./images/ChatGPT Image Oct 8, 2026, 08_41_17 AM.png" alt="Ism Familiya portreti" width="320" height="320" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 2. MEN HAQIMDA ========== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="about-title">Men haqimda</h2>
+        </div>
+
+        <div class="about">
+          <div class="about__text">
+            <!-- ✏️ O'ZGARTIRING: 3-4 gapda o'zingiz haqingizda yozing -->
+            <p class="lead">Men Xivada yashayman va 9-sinfda o'qiyman. ITXiva'da veb-dasturlashni o'rganib, HTML, CSS va JavaScript bilan o'z sahifalarimni yasayapman.</p>
+            <p>Menga muammoni topib, uni kod bilan yechish yoqadi. Har bir sahifada avval nima uchun kerakligini o'ylayman, keyin dizayn va kodga o'taman.</p>
+            <p>Maqsadim — Computer Science yo'nalishi bo'yicha xorijiy universitetda o'qish va kelajakda o'zim yaratgan IT mahsulot bilan odamlarga foyda keltirish.</p>
+          </div>
+
+          <dl class="facts">
+            <div><dt>Joylashuv</dt><dd>Xiva, Xorazm viloyati</dd></div>
+            <div><dt>Hozir</dt><dd>9-sinf o'quvchisi</dd></div>
+            <div><dt>O'rganyapman</dt><dd>JavaScript va API bilan ishlash</dd></div>
+            <div><dt>Tillar</dt><dd>O'zbek, rus, ingliz</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. KO'NIKMALAR ========== -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="skills-title">Ko'nikmalarim</h2>
+          <p>Har bir vosita yonida hozirgi darajam ko'rsatilgan.</p>
+        </div>
+
+        <!-- ✏️ O'ZGARTIRING: data-level="1" boshlang'ich, "2" o'rta, "3" yaxshi -->
+        <ul class="skills">
+          <li class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" width="40" height="40" loading="lazy">
+            <div><p class="skill__name">HTML5</p><p class="skill__level"><span class="level" data-level="3" aria-hidden="true"><i></i><i></i><i></i></span>Yaxshi</p></div>
+          </li>
+          <li class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" width="40" height="40" loading="lazy">
+            <div><p class="skill__name">CSS3</p><p class="skill__level"><span class="level" data-level="3" aria-hidden="true"><i></i><i></i><i></i></span>Yaxshi</p></div>
+          </li>
+          <li class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="40" height="40" loading="lazy">
+            <div><p class="skill__name">JavaScript</p><p class="skill__level"><span class="level" data-level="2" aria-hidden="true"><i></i><i></i><i></i></span>O'rta</p></div>
+          </li>
+          <li class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="40" height="40" loading="lazy">
+            <div><p class="skill__name">Python</p><p class="skill__level"><span class="level" data-level="2" aria-hidden="true"><i></i><i></i><i></i></span>O'rta</p></div>
+          </li>
+          <li class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="" width="40" height="40" loading="lazy">
+            <div><p class="skill__name">Figma</p><p class="skill__level"><span class="level" data-level="1" aria-hidden="true"><i></i><i></i><i></i></span>Boshlang'ich</p></div>
+          </li>
+          <li class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="40" height="40" loading="lazy">
+            <div><p class="skill__name">Git</p><p class="skill__level"><span class="level" data-level="2" aria-hidden="true"><i></i><i></i><i></i></span>O'rta</p></div>
+          </li>
+          <li class="skill">
+            <img class="icon--mono" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" width="40" height="40" loading="lazy">
+            <div><p class="skill__name">GitHub</p><p class="skill__level"><span class="level" data-level="2" aria-hidden="true"><i></i><i></i><i></i></span>O'rta</p></div>
+          </li>
+          <li class="skill">
+            <img class="icon--mono" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" alt="" width="40" height="40" loading="lazy">
+            <div><p class="skill__name">Vercel</p><p class="skill__level"><span class="level" data-level="2" aria-hidden="true"><i></i><i></i><i></i></span>O'rta</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== 4. LOYIHALAR ========== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="projects-title">Loyihalarim</h2>
+          <p>Har bir loyihada avval muammoni topdim, keyin yechim yasadim va natijani tekshirdim.</p>
+        </div>
+
+        <!-- ✏️ O'ZGARTIRING: o'z loyihalaringizni yozing. Demo va GitHub havolalarini haqiqiylariga almashtiring -->
+        <div class="projects">
+
+          <!-- Loyiha 1 -->
+          <article class="project">
+            <div class="project__thumb">
+              <svg viewBox="0 0 400 240" role="img" aria-label="Vazifalar ro'yxati ilovasi ko'rinishi">
+                <rect class="t-card" x="72" y="28" width="256" height="190" rx="14"/>
+                <rect class="t-ink" x="94" y="50" width="96" height="10" rx="5"/>
+                <rect class="t-check" x="94" y="82" width="18" height="18" rx="5"/>
+                <path class="t-tick" d="M99 91l4 4 7-8"/>
+                <rect class="t-line" x="124" y="87" width="150" height="8" rx="4"/>
+                <rect class="t-check" x="94" y="118" width="18" height="18" rx="5"/>
+                <path class="t-tick" d="M99 127l4 4 7-8"/>
+                <rect class="t-line" x="124" y="123" width="110" height="8" rx="4"/>
+                <rect class="t-box" x="95" y="155" width="16" height="16" rx="4"/>
+                <rect class="t-ink t-soft" x="124" y="159" width="130" height="8" rx="4"/>
+                <circle class="t-gold" cx="318" cy="206" r="20"/>
+                <path class="t-plus" d="M318 197v18M309 206h18"/>
+              </svg>
+            </div>
+            <div class="project__body">
+              <h3>Vazifa — kunlik reja</h3>
+              <dl class="story">
+                <dt>Muammo</dt>
+                <dd>Dars va uy vazifalarini daftarga yozsam, ko'pini unutib qo'yardim.</dd>
+                <dt>Yechim</dt>
+                <dd>Vazifa qo'shish, belgilash va o'chirish mumkin bo'lgan sahifa yasadim. Ro'yxat brauzer xotirasida saqlanadi.</dd>
+                <dt>Natija</dt>
+                <dd>Sahifani yopsam ham ro'yxat yo'qolmaydi, reja doim ko'z oldimda.</dd>
+              </dl>
+              <ul class="tags" aria-label="Texnologiyalar"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <div class="project__links">
+                <a class="btn btn--primary btn--sm" href="http://tasks.org/" target="_blank" rel="noopener noreferrer">Demo</a>
+                <a class="btn btn--ghost btn--sm" href="https://github.com/tasks/tasks" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Loyiha 2 -->
+          <article class="project">
+            <div class="project__thumb">
+              <svg viewBox="0 0 400 240" role="img" aria-label="Ob-havo ilovasi ko'rinishi">
+                <rect class="t-card" x="72" y="28" width="256" height="190" rx="14"/>
+                <circle class="t-gold" cx="132" cy="92" r="24"/>
+                <g class="t-ray"><path d="M132 54v-8M132 130v8M94 92h-8M170 92h8M105 65l-6-6M159 65l6-6M105 119l-6 6M159 119l6 6"/></g>
+                <text class="t-temp" x="196" y="106">24°</text>
+                <rect class="t-bar" x="96" y="170" width="40" height="30" rx="6"/>
+                <rect class="t-bar" x="148" y="156" width="40" height="44" rx="6"/>
+                <rect class="t-bar" x="200" y="164" width="40" height="36" rx="6"/>
+                <rect class="t-bar" x="252" y="148" width="40" height="52" rx="6"/>
+              </svg>
+            </div>
+            <div class="project__body">
+              <h3>Ob-havo — Xiva</h3>
+              <dl class="story">
+                <dt>Muammo</dt>
+                <dd>Bugungi harorat va shamolni bilish uchun reklamali saytlarga kirishga to'g'ri kelardi.</dd>
+                <dt>Yechim</dt>
+                <dd>Bepul ob-havo API'sidan ma'lumot olib, shahar bo'yicha harorat va shamol tezligini ko'rsatadigan sahifa yasadim.</dd>
+                <dt>Natija</dt>
+                <dd>Reklamasiz, sodda va telefonda qulay ochiladigan sahifa.</dd>
+              </dl>
+              <ul class="tags" aria-label="Texnologiyalar"><li>JavaScript</li><li>API</li><li>Responsiv</li></ul>
+              <div class="project__links">
+                <a class="btn btn--primary btn--sm" href="https://www.vantora.us/" target="_blank" rel="noopener noreferrer">Demo</a>
+                <a class="btn btn--ghost btn--sm" href="https://github.com/bkhezry/weather" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Loyiha 3 -->
+          <article class="project">
+            <div class="project__thumb">
+              <svg viewBox="0 0 400 240" role="img" aria-label="Xiva sayohat saytining ko'rinishi">
+                <rect class="t-sand" x="0" y="178" width="400" height="62"/>
+                <g class="t-wall"><rect x="36" y="128" width="104" height="50"/><rect x="260" y="128" width="104" height="50"/></g>
+                <path class="t-dome" d="M70 128a22 22 0 0 1 44 0z"/>
+                <path class="t-dome" d="M286 128a22 22 0 0 1 44 0z"/>
+                <rect class="t-tower" x="162" y="50" width="76" height="128"/>
+                <rect class="t-tower" x="156" y="44" width="88" height="8" rx="2"/>
+                <rect class="t-stripe" x="162" y="62" width="76" height="9"/>
+                <rect class="t-stripe" x="162" y="84" width="76" height="9"/>
+                <rect class="t-stripe" x="162" y="106" width="76" height="9"/>
+                <rect class="t-stripe" x="162" y="128" width="76" height="9"/>
+                <rect class="t-stripe" x="162" y="150" width="76" height="9"/>
+                <path class="t-door" d="M190 178v-14a10 10 0 0 1 20 0v14z"/>
+              </svg>
+            </div>
+            <div class="project__body">
+              <h3>Xiva sayohat — mini sayt</h3>
+              <dl class="story">
+                <dt>Muammo</dt>
+                <dd>Xivaga kelgan mehmonlar Ichan Qal'adagi ko'riladigan joylarni topishda qiynalardi.</dd>
+                <dt>Yechim</dt>
+                <dd>Figma'da eskiz chizib, joylar kartalari va xarita havolalari bor telefonga mos sayt yasadim.</dd>
+                <dt>Natija</dt>
+                <dd>Mehmonlarga bitta havola yuborish kifoya: sayt telefonda ham qulay ochiladi.</dd>
+              </dl>
+              <ul class="tags" aria-label="Texnologiyalar"><li>HTML</li><li>CSS Grid</li><li>Figma</li></ul>
+              <div class="project__links">
+                <a class="btn btn--primary btn--sm" href="https://project-travel-mate.github.io/" target="_blank" rel="noopener noreferrer">Demo</a>
+                <a class="btn btn--ghost btn--sm" href="https://github.com/project-travel-mate/Travel-Mate" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 5. TA'LIM VA YUTUQLAR ========== -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="education-title">Ta'lim va yutuqlar</h2>
+        </div>
+
+        <div class="edu">
+          <div>
+            <h3>Ta'lim</h3>
+            <!-- ✏️ O'ZGARTIRING: maktab, kurslar va sanalar -->
+            <ol class="timeline">
+              <li>
+                <p class="timeline__when">2025 — hozir</p>
+                <p class="timeline__title">ITXiva, veb-dasturlash kursi</p>
+                <p class="timeline__text">HTML, CSS, JavaScript, Git va Vercel bo'yicha amaliy mashg'ulotlar.</p>
+              </li>
+              <li>
+                <p class="timeline__when">2016 — 2027</p>
+                <p class="timeline__title">Umumiy o'rta ta'lim maktabi, Xiva</p>
+                <p class="timeline__text">Hozir 11-sinfda o'qiyman. Informatika va matematika yo'nalishiga e'tibor beraman.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <h3>Yutuqlar</h3>
+            <!-- ✏️ O'ZGARTIRING: sertifikat, olimpiada va tanlov natijalaringizni qo'shing -->
+            <ul class="achievements">
+              <li>
+                <span class="achievements__year">2026</span>
+                <div>
+                  <p class="achievements__title">Shaxsiy portfolio sayt</p>
+                  <p class="achievements__text">Noldan yozildi, GitHub'ga yuklandi va Vercel orqali internetga chiqarildi.</p>
+                </div>
+              </li>
+              <li>
+                <span class="achievements__year">2026</span>
+                <div>
+                  <p class="achievements__title">ITXiva imtihoni</p>
+                  <p class="achievements__text">Veb-dasturlash asoslari bo'yicha 10 savollik quiz topshirildi.</p>
+                </div>
+              </li>
+              <li>
+                <span class="achievements__year">2026</span>
+                <div>
+                  <p class="achievements__title">3 ta ochiq loyiha</p>
+                  <p class="achievements__text">Kodlari GitHub'da, demo versiyalari Vercel'da hamma uchun ochiq.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. ALOQA ========== -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="section__head">
+          <h2 id="contact-title">Birga biror narsa yasaymizmi?</h2>
+          <p>Stajirovka, freelance buyurtma yoki oddiy savol bo'lsa ham yozing. Odatda bir kun ichida javob beraman.</p>
+        </div>
+
+        <!-- ✏️ O'ZGARTIRING: email, Telegram, GitHub va LinkedIn havolalaringiz -->
+        <ul class="contact__list">
+          <li>
+            <a href="mailto:rellixsouja@gmail.com">
+              <span class="contact__label">Email</span>
+              <span class="contact__value">rellixsouja@gmail.com</span>
+            </a>
+            <button class="copy" type="button" data-copy="ismingiz@gmail.com">Nusxa olish</button>
+          </li>
+          <li>
+            <a href="https://t.me/RellixsYT" target="_blank" rel="noopener noreferrer">
+              <span class="contact__label">Telegram</span>
+              <span class="contact__value">@RellixsYT</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/RellixsMF" target="_blank" rel="noopener noreferrer">
+              <span class="contact__label">GitHub</span>
+              <span class="contact__value">github.com/LOGIN</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/rellixsouja-rellixssouja-0a535a362/" target="_blank" rel="noopener noreferrer">
+              <span class="contact__label">LinkedIn</span>
+              <span class="contact__value">linkedin.com/in/rellixsouja</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© <span id="year">2026</span> <span data-name>Rustamboyev Behruz</span></p>
+      <p>HTML, CSS va JavaScript bilan qo'lda yozilgan.</p>
+      <a href="#top">Tepaga qaytish</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
