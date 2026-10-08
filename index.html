@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- ✏️ O'ZGARTIRING: sahifa sarlavhasi va tavsifi (Google va Telegram'da shunday ko'rinadi) -->
   <title>Ism Familiya | Frontend dasturchi, Xiva</title>
   <meta name="description" content="Ism Familiya — Xivalik 11-sinf o'quvchisi va frontend dasturchi. HTML, CSS va JavaScript bilan telefonda ham, kompyuterda ham yaxshi ishlaydigan saytlar yasayman.">
   <meta name="theme-color" content="#0f766e">
@@ -16,7 +15,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 
-  <!-- Sahifa yuklanishidan oldin mavzuni qo'yadi (oq chaqnash bo'lmasligi uchun) -->
   <script>
     (function () {
       try {
@@ -32,7 +30,6 @@
 <body>
   <a class="skip" href="#about">Asosiy qismga o'tish</a>
 
-  <!-- ========== HEADER ========== -->
   <header class="site-header" id="top">
     <div class="container site-header__inner">
       <a class="brand" href="#hero" aria-label="Bosh sahifaga qaytish">
@@ -63,7 +60,6 @@
   </header>
 
   <main>
-    <!-- ========== 1. HERO ========== -->
     <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="hero__pattern" aria-hidden="true">
         <div class="hero__glow"></div>
@@ -71,7 +67,6 @@
 
       <div class="container hero__inner">
         <div class="hero__text">
-          <!-- ✏️ O'ZGARTIRING: ism, yo'nalish va shior -->
           <p class="status" style="--i:0"><span class="status__dot" aria-hidden="true"></span>Stajirovka va freelance loyihalarga ochiqman</p>
           <p class="hero__hello" style="--i:1">Salom, men</p>
           <h1 class="hero__name" id="hero-title" style="--i:2" data-name>Rustamboyev Behruz</h1>
@@ -92,14 +87,12 @@
           </svg>
           <div class="avatar">
             <span class="avatar__initials" aria-hidden="true" data-initials>IF</span>
-            <!-- ✏️ O'ZGARTIRING: o'z rasmingizni images/me.jpg nomi bilan saqlang -->
             <img src="./images/ChatGPT Image Oct 8, 2026, 08_41_17 AM.png" alt="Ism Familiya portreti" width="320" height="320" fetchpriority="high">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== 2. MEN HAQIMDA ========== -->
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="container">
         <div class="section__head">
@@ -108,7 +101,6 @@
 
         <div class="about">
           <div class="about__text">
-            <!-- ✏️ O'ZGARTIRING: 3-4 gapda o'zingiz haqingizda yozing -->
             <p class="lead">Men Xivada yashayman va 9-sinfda o'qiyman. ITXiva'da veb-dasturlashni o'rganib, HTML, CSS va JavaScript bilan o'z sahifalarimni yasayapman.</p>
             <p>Menga muammoni topib, uni kod bilan yechish yoqadi. Har bir sahifada avval nima uchun kerakligini o'ylayman, keyin dizayn va kodga o'taman.</p>
             <p>Maqsadim — Computer Science yo'nalishi bo'yicha xorijiy universitetda o'qish va kelajakda o'zim yaratgan IT mahsulot bilan odamlarga foyda keltirish.</p>
@@ -124,7 +116,6 @@
       </div>
     </section>
 
-    <!-- ========== 3. KO'NIKMALAR ========== -->
     <section class="section" id="skills" aria-labelledby="skills-title">
       <div class="container">
         <div class="section__head">
@@ -132,7 +123,6 @@
           <p>Har bir vosita yonida hozirgi darajam ko'rsatilgan.</p>
         </div>
 
-        <!-- ✏️ O'ZGARTIRING: data-level="1" boshlang'ich, "2" o'rta, "3" yaxshi -->
         <ul class="skills">
           <li class="skill">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" width="40" height="40" loading="lazy">
@@ -170,7 +160,6 @@
       </div>
     </section>
 
-    <!-- ========== 4. LOYIHALAR ========== -->
     <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <div class="section__head">
@@ -178,10 +167,8 @@
           <p>Har bir loyihada avval muammoni topdim, keyin yechim yasadim va natijani tekshirdim.</p>
         </div>
 
-        <!-- ✏️ O'ZGARTIRING: o'z loyihalaringizni yozing. Demo va GitHub havolalarini haqiqiylariga almashtiring -->
         <div class="projects">
 
-          <!-- Loyiha 1 -->
           <article class="project">
             <div class="project__thumb">
               <svg viewBox="0 0 400 240" role="img" aria-label="Vazifalar ro'yxati ilovasi ko'rinishi">
@@ -217,7 +204,6 @@
             </div>
           </article>
 
-          <!-- Loyiha 2 -->
           <article class="project">
             <div class="project__thumb">
               <svg viewBox="0 0 400 240" role="img" aria-label="Ob-havo ilovasi ko'rinishi">
@@ -249,7 +235,6 @@
             </div>
           </article>
 
-          <!-- Loyiha 3 -->
           <article class="project">
             <div class="project__thumb">
               <svg viewBox="0 0 400 240" role="img" aria-label="Xiva sayohat saytining ko'rinishi">
@@ -289,7 +274,6 @@
       </div>
     </section>
 
-    <!-- ========== 5. TA'LIM VA YUTUQLAR ========== -->
     <section class="section" id="education" aria-labelledby="education-title">
       <div class="container">
         <div class="section__head">
@@ -299,7 +283,6 @@
         <div class="edu">
           <div>
             <h3>Ta'lim</h3>
-            <!-- ✏️ O'ZGARTIRING: maktab, kurslar va sanalar -->
             <ol class="timeline">
               <li>
                 <p class="timeline__when">2025 — hozir</p>
@@ -316,7 +299,6 @@
 
           <div>
             <h3>Yutuqlar</h3>
-            <!-- ✏️ O'ZGARTIRING: sertifikat, olimpiada va tanlov natijalaringizni qo'shing -->
             <ul class="achievements">
               <li>
                 <span class="achievements__year">2026</span>
@@ -345,7 +327,6 @@
       </div>
     </section>
 
-    <!-- ========== 6. ALOQA ========== -->
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container contact">
         <div class="section__head">
@@ -353,7 +334,6 @@
           <p>Stajirovka, freelance buyurtma yoki oddiy savol bo'lsa ham yozing. Odatda bir kun ichida javob beraman.</p>
         </div>
 
-        <!-- ✏️ O'ZGARTIRING: email, Telegram, GitHub va LinkedIn havolalaringiz -->
         <ul class="contact__list">
           <li>
             <a href="mailto:rellixsouja@gmail.com">
@@ -385,7 +365,6 @@
     </section>
   </main>
 
-  <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <p>© <span id="year">2026</span> <span data-name>Rustamboyev Behruz</span></p>
